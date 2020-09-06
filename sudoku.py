@@ -206,22 +206,23 @@ def sudoku_gen(bo, attempts):
             bo[row][col] = backup
             attempts -= 1
 
-# create a list for fill grid
-numberList = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+if __name__ == "__main__":
+    # create a list for fill grid
+    numberList = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-# Now start to generate the sudoku puzzle and solve it
-grid = generate_board()
-fill_board(grid)
-print('full grid')
-print_board(grid)
-print('\n')
+    # Now start to generate the sudoku puzzle and solve it
+    grid = generate_board()
+    fill_board(grid)
+    print('full grid')
+    print_board(grid)
+    print('\n')
 
 
-sudoku_gen(grid, 5)
-print('sudoku')
-print_board(grid)
-print('\n')
+    sudoku_gen(grid, 5)
+    print('sudoku')
+    print_board(grid)
+    print('\n')
 
-solve(grid)
-print('solved')
-print_board(grid)
+    solve(grid)
+    print('solved')
+    print_board(grid)
